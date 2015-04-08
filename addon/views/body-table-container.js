@@ -17,10 +17,10 @@ export default TableContainer.extend(MouseWheelHandlerMixin, TouchMoveHandlerMix
   // Workaround to fix #1
   fixBlankOnLoad: function () {
     Ember.run.next(this, function() {
-      if(this._state !== 'inDOM'){ return; }
+      if (this._state !== 'inDOM') { return; }
       this.set('scrollTop', 30);
       Ember.run.next(this, function() {
-        if(this._state !== 'inDOM'){ return; }
+        if (this._state !== 'inDOM') { return; }
         this.set('scrollTop', 0);
       });
     });
